@@ -10,9 +10,9 @@
     <link rel="stylesheet" href="style.css">
     <title>Hello, world!</title>
   </head>
-  <body>
-
-    <header id="header">
+  <body data-spy="scroll" data-target="#navbarSupportedContent" data-offset="56">
+    
+    <header id="header" class="sticky-top">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
                 <a class="navbar-brand" href="#">
@@ -24,27 +24,27 @@
           
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                  <a class="nav-link" href="#">La conferencia</a>
+                <li class="nav-item">
+                  <a class="nav-link" href="#main">La conferencia</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Los Oradores</a>
+                  <a class="nav-link" href="#speakers">Los Oradores</a>
                 </li>   
                 <li class="nav-item">
-                    <a class="nav-link" href="#">El lugar y la fecha</a>
+                    <a class="nav-link" href="#place-time">El lugar y la fecha</a>
                   </li>   
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Conviértete en Orador</a>
+                    <a class="nav-link" href="#conviertete-en-orador">Conviértete en Orador</a>
                   </li>   
                   <li class="nav-item">
-                    <a class="nav-link text-platzi" href="#">Comprar tickets</a>
+                    <a class="nav-link text-platzi" href="#" data-toggle="modal" data-target="#comprarTicket">Comprar tickets</a>
                   </li>            
               </ul>          
             </div>
             </div>
           </nav>
     </header>
-
+    
     <main id="main">
         <div id="carousel" class="carousel slide" data-ride="carousel" data-pause="false">
             <div class="carousel-inner">
@@ -64,7 +64,7 @@
                             <h1>Platzi conf Hawaii</h1>
                             <p class="d-none d-md-block">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, illum veritatis saepe totam quod libero animi tempore numquam repudiandae earum magnam sunt aperiam voluptate mollitia officiis sed exercitationem! Sint, consequuntur?</p>
                             <a href="" class="btn btn-outline-light">Quiero ser Orador</a>
-                            <button type="button" class="btn btn-platzi">Comprar Tickets</button>
+                            <button type="button" class="btn btn-platzi" data-toggle="modal" data-target="#comprarTicket">Comprar Tickets</button>
                         </div>
                     </div>
                 </div>
@@ -205,6 +205,28 @@
       </div>
     </section>
     <!-- /Conviertete en orador -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="comprarTicket" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /Modal -->
     
     <footer id="footer" class="pb-4 pt-4">
         <div class="container">
